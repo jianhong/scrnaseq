@@ -32,7 +32,7 @@ The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool
 
 3. Run Seurat4 ([`Seurat`](https://satijalab.org/seurat/))
 
-4. Calculating Trajectories  ([`Monocle3`](https://cole-trapnell-lab.github.io/monocle3/))
+4. Calculating Trajectories ([`Monocle3`](https://cole-trapnell-lab.github.io/monocle3/))
 
 5. Estimating RNA Velocity ([`scVelo`](https://scvelo.readthedocs.io/))
 

@@ -28,7 +28,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '10'
+          node-version: "10"
 
       - name: Install editorconfig-checker
         run: npm install -g editorconfig-checker
@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: '10'
+          node-version: "10"
       - name: Install yaml-lint
         run: npm install -g yaml-lint
       - name: Run yaml-lint
