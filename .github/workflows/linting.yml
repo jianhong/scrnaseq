@@ -26,15 +26,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "10"
+      - uses: actions/setup-node@v2
 
       - name: Install editorconfig-checker
         run: npm install -g editorconfig-checker
 
       - name: Run ECLint check
-        run: editorconfig-checker -exclude README.md $(git ls-files | grep -v test)
+        run: editorconfig-checker -exclude README.md $(find .* -type f | grep -v '.git\|.py\|.md\|json\|yml\|yaml\|html\|css\|work\|.nextflow\|build\|nf_core.egg-info\|log.txt\|Makefile')
 
   YAML:
     runs-on: ubuntu-latest
