@@ -30,8 +30,23 @@ On release, automated continuous integration tests run the pipeline on a full-si
 
 <!-- TODO nf-core: Fill in short bullet-pointed list of the default steps in the pipeline -->
 
-1. Read QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-2. Present QC for raw reads ([`MultiQC`](http://multiqc.info/))
+1. Prepare fastq files ([`CellRanger::mkfastq`](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/mkfastq))
+
+2. Get gene expression ([`CellRange::count`](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/count))
+
+3. Run Seurat4 ([`Seurat`](https://satijalab.org/seurat/))
+
+4. Calculating Trajectories  ([`Monocle3`](https://cole-trapnell-lab.github.io/monocle3/))
+
+5. Estimating RNA Velocity ([`scVelo`](https://scvelo.readthedocs.io/))
+
+6. Trajectories reconstruction ([`STREAM`](https://github.com/pinellolab/STREAM))
+
+7. Assign cell types ([`cellassign`](https://github.com/irrationone/cellassign))
+
+8. Create object for [`scRNAseqApp`](https://github.com/jianhong/scRNAseqApp)
+
+9. Present QC for CellRanger ([`MultiQC`](http://multiqc.info/))
 
 ## Quick Start
 
