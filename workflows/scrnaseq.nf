@@ -105,11 +105,11 @@ workflow SCRNASEQ {
     //
     // MODULE: Run cellranger count
     //
-    /*CELLRANGER_COUNT (
+    CELLRANGER_COUNT (
         ch_reads,
         PREPARE_TRANSCRITOME.out.transcriptome
     )
-    ch_versions = ch_versions.mix(CELLRANGER_COUNT.out.versions)*/
+    ch_versions = ch_versions.mix(CELLRANGER_COUNT.out.versions)
 
     CUSTOM_DUMPSOFTWAREVERSIONS (
         ch_versions.unique().collectFile(name: 'collated_versions.yml')

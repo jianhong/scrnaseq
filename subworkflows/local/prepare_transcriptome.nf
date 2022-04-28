@@ -7,8 +7,8 @@ include {
     GUNZIP as GUNZIP_FASTA;
     GUNZIP as GUNZIP_GTF               } from '../../modules/nf-core/modules/gunzip/main'
 include { GTF_FILTER                   } from '../../modules/local/gtf_filter'
-include { CELLRANGER_MKGTF             } from '../../modules/nf-core/modules/cellranger/mkgtf/main'
-include { CELLRANGER_MKREF             } from '../../modules/nf-core/modules/cellranger/mkref/main'
+include { CELLRANGER_MKGTF             } from '../../modules/local/cellranger/mkgtf/main'
+include { CELLRANGER_MKREF             } from '../../modules/local/cellranger/mkref/main'
 
 workflow PREPARE_TRANSCRITOME {
     main:
